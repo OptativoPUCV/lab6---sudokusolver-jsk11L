@@ -75,12 +75,12 @@ int is_valid(Node* n){
       
       if(n->sudo[i][k] != 0){
         if(columna[n->sudo[i][k]] == 1) return 0;
-        else columna[n->sudo[i][k]] = 1
+        else columna[n->sudo[i][k]] = 1;
       }
 
       if(n->sudo[k][i] != 0){
         if(fila[n->sudo[k][i]] == 1) return 0;
-        else fila[n->sudo[k][i]] = 1
+        else fila[n->sudo[k][i]] = 1;
       }
 
       int matrizI = 3*(i/3) + (k/3);
@@ -88,7 +88,7 @@ int is_valid(Node* n){
 
       if(n->sudo[matrizI][matrizJ] != 0){
         if(matriz[n->sudo[matrizI][matrizJ]] == 1) return 0;
-        else matriz[n->sudo[matrizI][matrizJ]] = 1
+        else matriz[n->sudo[matrizI][matrizJ]] = 1;
       }
       
     } 
