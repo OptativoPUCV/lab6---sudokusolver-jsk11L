@@ -45,17 +45,24 @@ void print_node(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-    int aux = 2;
+    int aux = 1;
     for(int i = 0; i < 9; i++){
+      
       for(int j = 0; j < 9; j++){
-        if(aux == 10) return list;
+        
         if(n->sudo[i][j] == 0 ){
-          n->sudo[i][j] = aux;
-          aux++;
-          Node* nuevoNodo = copy(n);
-          pushBack(list, nuevoNodo);
+          
+          for(int aux = 1; aux < 10; aux++){
+            
+            n->sudo[i][j] = aux;
+            Node* nuevoNodo = copy(n);
+            pushBack(list,nuevoNodo);
+          }
+          
         }
+        
       }
+      
     }
 
     return list;

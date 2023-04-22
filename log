@@ -42,3 +42,14 @@ Sat 22 Apr 2023 04:59:46 PM UTC:
  tests:  0|5
 total_score: 0/70
 15ff41d
+Sat 22 Apr 2023 05:01:45 PM UTC: 
+ sudoku.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:48:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   48 |     int aux = 1;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+eb827d7
