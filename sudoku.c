@@ -66,7 +66,7 @@ int is_valid(Node* n){
       if(n->sudo[k][i] != 0){
         if(columna[n->sudo[k][i]] == 1) return 0;
         else columna[n->sudo[k][i]] = 1;
-      }
+      // }
 
       int matrizI = 3*(i/3) + (k/3);
       int matrizJ = 3*(i%3) + (k%3);
@@ -102,7 +102,12 @@ List* get_adj_nodes(Node* n){
 }
 
 int is_final(Node* n){
-    return 0;
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        if(n->sudo[i][j] == 0) return 0;
+      }
+    }
+    return 1;
 }
 
 Node* DFS(Node* initial, int* cont){
