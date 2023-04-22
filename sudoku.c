@@ -76,8 +76,10 @@ int is_valid(Node* n){
         else matriz[n->sudo[matrizI][matrizJ]] = 1;
       } 
       
-    } 
+    }
+    
   }
+  
   return 1;
 }
 
@@ -109,6 +111,22 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* pila = createStack();
+  push(pila,initial);
+
+  while(is_empty(pila) != 0){
+    Node* primero = top(pila);
+    pop(pila);
+    
+    if(is_final(primero) == 1) return primero;
+    else List* lista = get_adj_nodos(primero);
+
+    Node* nodos = first(lista);
+    while(nodos != NULL){
+      push(Stack,nodos);
+      nodos = next(lista);
+    }
+  }
   return NULL;
 }
 

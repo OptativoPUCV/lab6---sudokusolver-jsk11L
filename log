@@ -392,3 +392,27 @@ Sat 22 Apr 2023 05:34:55 PM UTC:
  tests:  7|1
 total_score: 55/70
 9312807
+Sat 22 Apr 2023 06:00:21 PM UTC: 
+ sudoku.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:122:10: error: expected expression before ‘List’
+  122 |     else List* lista = get_adj_nodos(primero);
+      |          ^~~~
+sudoku.c:124:25: error: ‘lista’ undeclared (first use in this function)
+  124 |     Node* nodos = first(lista);
+      |                         ^~~~~
+sudoku.c:124:25: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:126:12: error: expected expression before ‘Stack’
+  126 |       push(Stack,nodos);
+      |            ^~~~~
+sudoku.c:126:7: error: too few arguments to function ‘push’
+  126 |       push(Stack,nodos);
+      |       ^~~~
+In file included from test.c:4:
+list.h:33:6: note: declared here
+   33 | void push(Stack* s, void* data);
+      |      ^~~~
+Compilation failed
+e1887aa
