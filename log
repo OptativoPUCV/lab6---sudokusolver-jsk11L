@@ -164,3 +164,28 @@ sudoku.c:91:52: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 f66ca18
+Sat 22 Apr 2023 05:19:28 PM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:78:40: error: expected ‘;’ before ‘}’ token
+   78 |         else columna[n->sudo[i][k]] = 1
+      |                                        ^
+      |                                        ;
+   79 |       }
+      |       ~                                 
+sudoku.c:83:37: error: expected ‘;’ before ‘}’ token
+   83 |         else fila[n->sudo[k][i]] = 1
+      |                                     ^
+      |                                     ;
+   84 |       }
+      |       ~                              
+sudoku.c:91:51: error: expected ‘;’ before ‘}’ token
+   91 |         else matriz[n->sudo[matrizI][matrizJ]] = 1
+      |                                                   ^
+      |                                                   ;
+   92 |       }
+      |       ~                                            
+Compilation failed
+5086832
