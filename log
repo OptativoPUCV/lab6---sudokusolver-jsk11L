@@ -430,3 +430,16 @@ sudoku.c:124:25: error: ‘lista’ undeclared (first use in this function)
 sudoku.c:124:25: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 e83a70a
+Sat 22 Apr 2023 06:00:57 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:122:19: error: implicit declaration of function ‘get_adj_nodos’; did you mean ‘get_adj_nodes’? [-Werror=implicit-function-declaration]
+  122 |     List* lista = get_adj_nodos(primero);
+      |                   ^~~~~~~~~~~~~
+      |                   get_adj_nodes
+sudoku.c:122:19: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+69cd7f6
