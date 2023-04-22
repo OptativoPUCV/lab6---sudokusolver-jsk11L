@@ -309,3 +309,19 @@ sudoku.c:54:16: error: implicit declaration of function ‘is_valid’ [-Werror=
 cc1: all warnings being treated as errors
 Compilation failed
 d9b3fe2
+Sat 22 Apr 2023 05:29:58 PM UTC: 
+ sudoku.c | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:94:35: error: passing argument 1 of ‘is_valid’ makes pointer from integer without a cast [-Werror=int-conversion]
+   94 |             if(is_valid(n->sudo[i][j]) == 1){
+      |                         ~~~~~~~~~~^~~
+      |                                   |
+      |                                   int
+sudoku.c:46:20: note: expected ‘Node *’ but argument is of type ‘int’
+   46 | int is_valid(Node* n){
+      |              ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+837e98b
