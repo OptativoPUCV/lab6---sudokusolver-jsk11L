@@ -123,7 +123,7 @@ Node* DFS(Node* initial, int* cont){
 
     Node* nodos = first(lista);
     while(nodos != NULL){
-      push(Stack,nodos);
+      push(pila,nodos);
       nodos = next(lista);
     }
   }
