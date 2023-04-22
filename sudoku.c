@@ -119,7 +119,7 @@ Node* DFS(Node* initial, int* cont){
     pop(pila);
     
     if(is_final(primero) == 1) return primero;
-    List* lista = get_adj_nodos(primero);
+    List* lista = get_adj_nodes(primero);
 
     Node* nodos = first(lista);
     while(nodos != NULL){
