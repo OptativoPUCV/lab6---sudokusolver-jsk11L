@@ -60,9 +60,9 @@ List* get_adj_nodes(Node* n){
 }
 
 int is_valid(Node* n){
-  int fila[10] = 0;
-  int columna[10] = 0;
-  int matriz[10] = 0;
+  int fila[10];
+  int columna[10];
+  int matriz[10];
 
   for(int i = 0; i < 10; i++){
     fila[i] = 0;
