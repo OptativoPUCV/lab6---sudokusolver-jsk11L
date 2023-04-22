@@ -111,6 +111,7 @@ int is_valid(Node* n){
       if(n->sudo[matrizI][matrizJ] != 0){
         if(matriz[n->sudo[matrizI][matrizJ]] == 1) return 0;
         else matriz[n->sudo[matrizI][matrizJ]] = 1;
+      }
     }
   }
   

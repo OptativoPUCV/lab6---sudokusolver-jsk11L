@@ -253,3 +253,9 @@ test.c:7:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 d274370
+Sat 22 Apr 2023 05:21:50 PM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  2|4
+total_score: 15/70
+7b8ea74
