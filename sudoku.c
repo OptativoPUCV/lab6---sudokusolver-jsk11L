@@ -51,7 +51,9 @@ List* get_adj_nodes(Node* n){
           for(int aux = 1; aux < 10; aux++){
             n->sudo[i][j] = aux;
             Node* nuevoNodo = copy(n);
-            pushBack(list,nuevoNodo);
+            if(is_valid(n->sudo[i][j]) == 1){
+              pushBack(list,nuevoNodo);
+            }
           }
         }
       }
@@ -95,29 +97,6 @@ int is_valid(Node* n){
       
     } 
   }
-
-  /*for(int i = 0; i < 9; i++){
-    for(int ceros = 0; ceros < 10; ceros++) columna[ceros] = 0;
-    for(int k = 0; k < 9; k++){
-      if(n->sudo[k][i] != 0){
-        if(columna[n->sudo[k][i]] == 1) return 0;
-        else columna[n->sudo[k][i]] = 1;
-      }
-    }
-  }
-
-  for(int i = 0; i < 9; i++){
-    for(int ceros = 0; ceros < 10; ceros++) matriz[ceros] = 0;
-    for(int k = 0; k < 9; k++){
-      int matrizI = 3*(i/3) + (k/3);
-      int matrizJ = 3*(i%3) + (k%3);
-
-      if(n->sudo[matrizI][matrizJ] != 0){
-        if(matriz[n->sudo[matrizI][matrizJ]] == 1) return 0;
-        else matriz[n->sudo[matrizI][matrizJ]] = 1;
-      }
-    }
-  }*/
   
   return 1;
 }
