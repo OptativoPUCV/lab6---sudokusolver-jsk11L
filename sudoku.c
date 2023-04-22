@@ -65,11 +65,13 @@ int is_valid(Node* n){
   int matriz[10];
 
   for(int i = 0; i < 9; i++){
+    
     for(int ceros = 0; ceros < 10; ceros++){
       fila[ceros] = 0;
       columna[ceros] = 0;
       matriz[ceros] = 0;
     }
+    
     for(int k = 0; k < 9; k++){
       
       if(n->sudo[i][k] != 0){
@@ -88,6 +90,7 @@ int is_valid(Node* n){
       if(n->sudo[matrizI][matrizJ] != 0){
         if(matriz[n->sudo[matrizI][matrizJ]] == 1) return 0;
         else matriz[n->sudo[matrizI][matrizJ]] = 1;
+      } 
       
       
     } 
