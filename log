@@ -195,3 +195,40 @@ Sat 22 Apr 2023 05:19:35 PM UTC:
  tests:  2|4
 total_score: 15/70
 030b8f1
+Sat 22 Apr 2023 05:20:58 PM UTC: 
+ sudoku.c | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:65:7: error: variable ‘matriz’ set but not used [-Werror=unused-but-set-variable]
+   65 |   int matriz[10];
+      |       ^~~~~~
+sudoku.c:63:7: error: variable ‘fila’ set but not used [-Werror=unused-but-set-variable]
+   63 |   int fila[10];
+      |       ^~~~
+sudoku.c: At top level:
+sudoku.c:97:3: error: expected identifier or ‘(’ before ‘for’
+   97 |   for(int i = 0; i < 9; i++){
+      |   ^~~
+sudoku.c:97:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   97 |   for(int i = 0; i < 9; i++){
+      |                    ^
+sudoku.c:97:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+   97 |   for(int i = 0; i < 9; i++){
+      |                          ^~
+sudoku.c:106:3: error: expected identifier or ‘(’ before ‘for’
+  106 |   for(int i = 0; i < 9; i++){
+      |   ^~~
+sudoku.c:106:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+  106 |   for(int i = 0; i < 9; i++){
+      |                    ^
+sudoku.c:106:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+  106 |   for(int i = 0; i < 9; i++){
+      |                          ^~
+sudoku.c: In function ‘is_valid’:
+sudoku.c:95:3: error: control reaches end of non-void function [-Werror=return-type]
+   95 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+b1bf676
