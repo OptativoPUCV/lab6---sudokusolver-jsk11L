@@ -18,3 +18,15 @@ sudoku.c:56:20: note: each undeclared identifier is reported only once for each 
 cc1: all warnings being treated as errors
 Compilation failed
 9c58301
+Sat 22 Apr 2023 04:59:19 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:20: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   56 |           pushBack(lista, nuevoNodo);
+      |                    ^~~~~
+      |                    list
+sudoku.c:56:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+5cd47d7
