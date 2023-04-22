@@ -59,3 +59,29 @@ Sat 22 Apr 2023 05:01:52 PM UTC:
  tests:  2|4
 total_score: 15/70
 8a357db
+Sat 22 Apr 2023 05:09:08 PM UTC: 
+ sudoku.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:63:18: error: invalid initializer
+   63 |   int fila[10] = 0;
+      |                  ^
+sudoku.c:64:21: error: invalid initializer
+   64 |   int columna[10] = 0;
+      |                     ^
+sudoku.c:65:20: error: invalid initializer
+   65 |   int matriz[10] = 0;
+      |                    ^
+sudoku.c:65:7: error: unused variable ‘matriz’ [-Werror=unused-variable]
+   65 |   int matriz[10] = 0;
+      |       ^~~~~~
+sudoku.c:64:7: error: unused variable ‘columna’ [-Werror=unused-variable]
+   64 |   int columna[10] = 0;
+      |       ^~~~~~~
+sudoku.c:63:7: error: unused variable ‘fila’ [-Werror=unused-variable]
+   63 |   int fila[10] = 0;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4a43608
