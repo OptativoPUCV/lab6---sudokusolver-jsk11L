@@ -2,3 +2,19 @@ Tue 18 Apr 2023 04:03:23 AM UTC:
  tests:  0|5
 total_score: 0/70
 fe68dd6
+Sat 22 Apr 2023 04:59:10 PM UTC: 
+ sudoku.c | 23 +++++++++++++++++------
+ 1 file changed, 17 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:53:25: error: statement with no effect [-Werror=unused-value]
+   53 |           n->sudo[i][j] == aux;
+      |           ~~~~~~~~~~~~~~^~~~~~
+sudoku.c:56:20: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   56 |           pushBack(lista, nuevoNodo);
+      |                    ^~~~~
+      |                    list
+sudoku.c:56:20: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+9c58301
