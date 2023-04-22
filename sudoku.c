@@ -53,7 +53,7 @@ List* get_adj_nodes(Node* n){
           n->sudo[i][j] = aux;
           aux++;
           Node* nuevoNodo = copy(n);
-          pushBack(lista, nuevoNodo);
+          pushBack(list, nuevoNodo);
         }
       }
     }

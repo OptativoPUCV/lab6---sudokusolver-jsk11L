@@ -30,3 +30,9 @@ sudoku.c:56:20: error: ‘lista’ undeclared (first use in this function); did 
 sudoku.c:56:20: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 5cd47d7
+Sat 22 Apr 2023 04:59:22 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+39bbf1a
